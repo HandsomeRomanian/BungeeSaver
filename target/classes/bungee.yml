@@ -1,0 +1,10 @@
+name: BungeeSaver
+main: ca.matai.bungeesaver.BungeeSaver
+version: 0.2
+author: _Matai_
+
+commands:
+  Ban:
+    description: Kick a player
+    aliases: ban
+    usage: Syntax error! Simply type /&lt;ban&gt; <player> to kick someone.
