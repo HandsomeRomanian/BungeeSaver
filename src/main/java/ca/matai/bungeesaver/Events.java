@@ -2,11 +2,10 @@ package ca.matai.bungeesaver;
 
 import net.md_5.bungee.api.ChatColor;
 import net.md_5.bungee.api.ProxyServer;
-import net.md_5.bungee.api.chat.BaseComponent;
 import net.md_5.bungee.api.chat.ComponentBuilder;
 import net.md_5.bungee.api.chat.TextComponent;
-import net.md_5.bungee.api.config.ServerInfo;
 import net.md_5.bungee.api.connection.ProxiedPlayer;
+import net.md_5.bungee.api.event.PostLoginEvent;
 import net.md_5.bungee.api.event.PreLoginEvent;
 import net.md_5.bungee.api.event.ServerKickEvent;
 import net.md_5.bungee.api.plugin.Listener;
@@ -36,14 +35,14 @@ public class Events implements Listener {
                         p.connect(plugin.getProxy().getServerInfo("lobby"));
                         p.sendMessage(new TextComponent(ChatColor.RED + "Disconnected: " + ChatColor.RESET + event.getKickedFrom().getName() +" will be back shortly."));
                     }
-                }, 1l, TimeUnit.MICROSECONDS);
+                }, 1L, TimeUnit.MICROSECONDS);
             }
         }
     }
 
     @EventHandler
-    public void onJoin(PreLoginEvent event) {
-        UUID pID = event.getConnection().getUniqueId();
+    public void onJoin(PostLoginEvent event) {
+        UUID pID = event.getPlayer().getUniqueId();
         if(plugin.service.checkBAN(pID)){
             ProxiedPlayer player = ProxyServer.getInstance().getPlayer(pID);
             player.disconnect(new ComponentBuilder("You are banned on this network.").color(ChatColor.RED).create());

@@ -51,6 +51,7 @@ class Service {
     }
 
     void banPlayer(Ban ban){
+
         try {
             Connection DB = connectDB();
             if (DB == null){
@@ -59,8 +60,7 @@ class Service {
             ResultSet rep = req.executeQuery("INSERT INTO `bans` (`UUID`, `USERNAME`, `BANDATE`, `BANEND`, `BANNEDBY`, `REASON`, `SERVER`) " +
                     "VALUES ('"+ban.banned.getUniqueId()+"', '"+ban.banned.getName()+"', '"+ban.bandate+"', NULL, '"+ban.bannedby+"', '"+ban.reason+"', '"+ban.server+"');");
             DB.close();
-        }catch (Exception e){
-        }
+        }catch (Exception e){}
     }
 
 }

@@ -9,5 +9,8 @@
         <module name="bungeesaver" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="bungeesaver" target="1.7" />
+    </bytecodeTargetLevel>
   </component>
 </project>

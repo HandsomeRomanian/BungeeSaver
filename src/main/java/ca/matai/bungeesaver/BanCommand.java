@@ -18,25 +18,41 @@ public class BanCommand extends Command {
         if (commandSender.hasPermission("bungeecord.ban")){
             if (args.length == 1){
                 try {
-                    ProxiedPlayer player = plugin.getProxy().getPlayer(args[0]);
-                    plugin.service.banPlayer(new Ban(player,args.toString(),commandSender.getName(),player.getServer().getInfo().getName()));
-                    player.disconnect(new ComponentBuilder("You have been banned!").color(ChatColor.RED)
-                            .append("\n Banned by:" + commandSender.getName()).color(ChatColor.RESET).create());
-                    Service.message(commandSender, player.getDisplayName() + " has been banned!");
+                    for (ProxiedPlayer test: plugin.getProxy().getPlayers()) {
+                        String name = test.getName().toLowerCase();
+                        if (name.contains(args[0].toLowerCase())) {
+                            plugin.service.banPlayer(new Ban(test, args.toString(), commandSender.getName(), test.getServer().getInfo().getName()));
+                            test.disconnect(new ComponentBuilder("You have been banned!").color(ChatColor.RED)
+                                    .append("\n Banned by:" + commandSender.getName()).color(ChatColor.RESET).create());
+                            Service.message(commandSender, test.getDisplayName() + " has been banned!");
+                            return;
+                        }
+                    }
+                    Service.message(commandSender, "No player found with name similar to: " + args[0]);
+                    return;
                 }catch (Exception e){
                     Service.message(commandSender, "An error occurred, the player: " + args[0] + " couldn't be banned");
+                    return;
 
                 }
             }
             else if (args.length == 2){
                 try {
-                    ProxiedPlayer player = plugin.getProxy().getPlayer(args[0]);
-                    plugin.service.banPlayer(new Ban(player,args.toString(),commandSender.getName(),player.getServer().getInfo().getName()));
-                    player.disconnect(new ComponentBuilder(args[1])
-                            .append("\n Banned by:" + commandSender.getName()).create());
-                    Service.message(commandSender, player.getDisplayName() + " has been banned!");
+                    for (ProxiedPlayer test: plugin.getProxy().getPlayers()) {
+                        String name = test.getName().toLowerCase();
+                        if (name.contains(args[0].toLowerCase())) {
+                            plugin.service.banPlayer(new Ban(test, args.toString(), commandSender.getName(), test.getServer().getInfo().getName()));
+                            test.disconnect(new ComponentBuilder(args[1])
+                                    .append("\n Banned by:" + commandSender.getName()).create());
+                            Service.message(commandSender, test.getDisplayName() + " has been banned!");
+                            return;
+                        }
+                    }
+                    Service.message(commandSender, "No player found with name similar to: " + args[0]);
+                    return;
                 }catch (Exception e){
                     Service.message(commandSender, "An error occurred, the player: " + args[0] + " couldn't be banned");
+                    return;
                 }
             }
             else{

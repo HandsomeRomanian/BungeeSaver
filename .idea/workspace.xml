@@ -1,7 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6f61b288-c047-4b94-beb7-e00a7f562be5" name="Default Changelist" comment="" />
+    <list default="true" id="6f61b288-c047-4b94-beb7-e00a7f562be5" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bungeesaver.iml" beforeDir="false" afterPath="$PROJECT_DIR$/bungeesaver.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ca/matai/bungeesaver/BanCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ca/matai/bungeesaver/BanCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ca/matai/bungeesaver/CheckBanCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ca/matai/bungeesaver/CheckBanCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ca/matai/bungeesaver/Events.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ca/matai/bungeesaver/Events.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ca/matai/bungeesaver/KickCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ca/matai/bungeesaver/KickCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ca/matai/bungeesaver/Service.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ca/matai/bungeesaver/Service.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ca/matai/bungeesaver/YeetCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ca/matai/bungeesaver/YeetCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/plugin.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/plugin.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/plugin.yml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/plugin.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,7 +44,16 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
+  </component>
   <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="workOffline" value="true" />
+      </MavenGeneralSettings>
+    </option>
     <option name="importingSettings">
       <MavenImportingSettings>
         <option name="importAutomatically" value="true" />
@@ -40,7 +64,11 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../jumppads" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -76,10 +104,29 @@
       <option name="presentableId" value="Default" />
       <updated>1569897079269</updated>
       <workItem from="1569897082004" duration="15647000" />
+      <workItem from="1570068373869" duration="102000" />
+      <workItem from="1570068585567" duration="459000" />
+      <workItem from="1570069060446" duration="407000" />
+      <workItem from="1570069659295" duration="626000" />
+      <workItem from="1570071010859" duration="599000" />
+      <workItem from="1570754490858" duration="3066000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
