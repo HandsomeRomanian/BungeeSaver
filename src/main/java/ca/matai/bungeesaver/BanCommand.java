@@ -19,10 +19,13 @@ public class BanCommand extends Command {
             if (args.length == 1){
                 try {
                     for (ProxiedPlayer test: plugin.getProxy().getPlayers()) {
+
                         String name = test.getName().toLowerCase();
                         if (name.contains(args[0].toLowerCase())) {
-                            plugin.service.banPlayer(new Ban(test, args.toString(), commandSender.getName(), test.getServer().getInfo().getName()));
-                            test.disconnect(new ComponentBuilder("You have been banned!").color(ChatColor.RED)
+                            Ban ban = new Ban(test, "You have been banned!", commandSender.getName(), test.getServer().getInfo().getName());
+                            Service.message(commandSender,ban.toString());
+                            plugin.service.banPlayer(ban);
+                            test.disconnect(new ComponentBuilder(ban.reason).color(ChatColor.RED)
                                     .append("\n Banned by:" + commandSender.getName()).color(ChatColor.RESET).create());
                             Service.message(commandSender, test.getDisplayName() + " has been banned!");
                             return;
@@ -41,8 +44,10 @@ public class BanCommand extends Command {
                     for (ProxiedPlayer test: plugin.getProxy().getPlayers()) {
                         String name = test.getName().toLowerCase();
                         if (name.contains(args[0].toLowerCase())) {
-                            plugin.service.banPlayer(new Ban(test, args.toString(), commandSender.getName(), test.getServer().getInfo().getName()));
-                            test.disconnect(new ComponentBuilder(args[1])
+                            Ban ban = new Ban(test, args.toString(), commandSender.getName(), test.getServer().getInfo().getName());
+                            Service.message(commandSender,ban.toString());
+                            plugin.service.banPlayer(ban);
+                            test.disconnect(new ComponentBuilder(ban.reason)
                                     .append("\n Banned by:" + commandSender.getName()).create());
                             Service.message(commandSender, test.getDisplayName() + " has been banned!");
                             return;

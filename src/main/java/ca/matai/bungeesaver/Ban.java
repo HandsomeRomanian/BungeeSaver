@@ -20,4 +20,8 @@ public class Ban {
         this.bannedby = bannedby;
         this.server = server;
     }
+
+    public String toString(){
+        return this.banned.getName() + ":" + this.banned.getUniqueId() +"\n" + this.bannedby;
+    }
 }

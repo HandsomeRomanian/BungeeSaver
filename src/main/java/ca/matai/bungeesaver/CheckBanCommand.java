@@ -18,6 +18,7 @@ public class CheckBanCommand extends Command {
 
     @Override
     public void execute(CommandSender commandSender, String[] args) {
+        commandSender.sendMessage(new ComponentBuilder("Works").create());
         if (commandSender.hasPermission("bungeecord.checkban")){
             if (args.length == 1){
                 try {
