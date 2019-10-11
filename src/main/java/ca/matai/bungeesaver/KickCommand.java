@@ -19,21 +19,37 @@ public class KickCommand extends Command {
         if (commandSender.hasPermission("bungeecord.kick")){
             if (args.length == 1){
                 try {
-                    ProxiedPlayer player = plugin.getProxy().getPlayer(args[0]);
-                    player.disconnect(new ComponentBuilder("You have been Kicked!").color(ChatColor.RED).create());
-                    Service.message(commandSender, player.getDisplayName() + " has been Kicked!");
+                    for (ProxiedPlayer test: plugin.getProxy().getPlayers()) {
+                        String name = test.getName().toLowerCase();
+                        if (name.contains(args[0].toLowerCase())) {
+                            test.disconnect(new ComponentBuilder("You have been Kicked!").color(ChatColor.RED).create());
+                            Service.message(commandSender, test.getDisplayName() + " has been Kicked!");
+                            return;
+                        }
+                    }
+                    Service.message(commandSender, "No player found with name similar to: " + args[0]);
+                    return;
                 }catch (Exception e){
                     Service.message(commandSender, "An error occurred, the player: " + args[0] + " couldn't be kicked");
+                    return;
 
                 }
             }
             else if (args.length == 2){
                 try {
-                    ProxiedPlayer player = plugin.getProxy().getPlayer(args[0]);
-                    player.disconnect(new ComponentBuilder(args[1]).create());
-                    Service.message(commandSender, player.getDisplayName() + " has been kicked!");
+                    for (ProxiedPlayer test: plugin.getProxy().getPlayers()) {
+                        String name = test.getName().toLowerCase();
+                        if (name.contains(args[0].toLowerCase())) {
+                            test.disconnect(new ComponentBuilder(args[1]).create());
+                            Service.message(commandSender, test.getDisplayName() + " has been kicked!");
+                            return;
+                        }
+                    }
+                    Service.message(commandSender, "No player found with name similar to: " + args[0]);
+                    return;
                 }catch (Exception e){
                     Service.message(commandSender, "An error occurred, the player: " + args[0] + " couldn't be kicked");
+                    return;
 
                 }
             }
