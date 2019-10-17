@@ -18,9 +18,13 @@ public class CheckBanCommand extends Command {
 
     @Override
     public void execute(CommandSender commandSender, String[] args) {
-        commandSender.sendMessage(new ComponentBuilder("Works").create());
         if (commandSender.hasPermission("bungeecord.checkban")){
-            if (args.length == 1){
+            if (args.length == 0){
+                for (Ban ban:plugin.service.getBans()) {
+                 Service.message(commandSender, "User: "+ban.username+" got banned by "+ban.bannedby+ " on server " + ban.server + "\n" + ban.uuid.toString());
+                }
+            }
+            else if (args.length == 1){
                 try {
                     UUID uID = UUID.fromString(args[0]);
                     if (plugin.service.checkBAN(uID)){
@@ -34,6 +38,9 @@ public class CheckBanCommand extends Command {
                 catch (Exception e){
                     ProxyServer.getInstance().getLogger().info(e.getMessage());
                 }
+            }
+            else{
+                commandSender.sendMessage(new ComponentBuilder("/checkban [uuid]").create());
             }
         }
         else{

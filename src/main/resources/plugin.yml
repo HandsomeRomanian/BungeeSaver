@@ -1,6 +1,6 @@
 name: BungeeSaver
 main: ca.matai.bungeesaver.BungeeSaver
-version: 0.4
+version: 1.0.0
 author: _Matai_
 
 commands:

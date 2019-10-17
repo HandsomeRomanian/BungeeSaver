@@ -2,19 +2,32 @@ package ca.matai.bungeesaver;
 
 import net.md_5.bungee.api.connection.ProxiedPlayer;
 
-import java.sql.Time;
-import java.util.Date;
+import java.util.UUID;
 
 public class Ban {
-    public ProxiedPlayer banned;
+
+    public UUID uuid;
+    public String username;
     public String reason;
     public long bandate;
     public long endate;
     public String bannedby;
     public String server;
 
-    public Ban(ProxiedPlayer banned, String reason,String bannedby, String server){
-        this.banned = banned;
+    //`UUID`, `USERNAME`, `BANDATE`, `BANEND`, `BANNEDBY`, `REASON`, `SERVER`
+
+    public Ban(String uuid, String user, String reason,String bannedby, String server){
+        this.uuid = UUID.fromString(uuid);
+        this.username = user;
+        this.reason = reason;
+        this.bandate = System.currentTimeMillis();
+        this.bannedby = bannedby;
+        this.server = server;
+    }
+
+    public Ban(ProxiedPlayer player , String reason,String bannedby, String server){
+        this.uuid = player.getUniqueId();
+        this.username = player.getName();
         this.reason = reason;
         this.bandate = System.currentTimeMillis();
         this.bannedby = bannedby;
@@ -22,6 +35,6 @@ public class Ban {
     }
 
     public String toString(){
-        return this.banned.getName() + ":" + this.banned.getUniqueId() +"\n" + this.bannedby;
+        return this.username + ":" + this.uuid.toString() +"\n" + this.bannedby;
     }
 }

@@ -2,14 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6f61b288-c047-4b94-beb7-e00a7f562be5" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ca/matai/bungeesaver/Ban.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ca/matai/bungeesaver/Ban.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ca/matai/bungeesaver/BanCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ca/matai/bungeesaver/BanCommand.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ca/matai/bungeesaver/CheckBanCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ca/matai/bungeesaver/CheckBanCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ca/matai/bungeesaver/Events.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ca/matai/bungeesaver/Events.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ca/matai/bungeesaver/KickCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ca/matai/bungeesaver/KickCommand.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ca/matai/bungeesaver/Service.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ca/matai/bungeesaver/Service.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ca/matai/bungeesaver/YeetCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ca/matai/bungeesaver/YeetCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/plugin.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/plugin.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/bungee.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/plugin.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -53,7 +63,8 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../jumppads" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -64,6 +75,7 @@
       <recent name="ca.matai.bungeesaver" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Mat\IdeaProjects\bungeesaver" />
       <recent name="C:\Users\Mat\IdeaProjects\bungeesaver\src\main\resources" />
     </key>
   </component>
@@ -99,6 +111,10 @@
       <workItem from="1570069659295" duration="626000" />
       <workItem from="1570071010859" duration="599000" />
       <workItem from="1570754490858" duration="8221000" />
+      <workItem from="1570824198570" duration="9929000" />
+      <workItem from="1571331071640" duration="5597000" />
+      <workItem from="1571336998882" duration="346000" />
+      <workItem from="1571337360422" duration="855000" />
     </task>
     <servers />
   </component>
@@ -117,5 +133,19 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/ca/matai/bungeesaver/Service.java</url>
+          <line>30</line>
+          <properties class="ca.matai.bungeesaver.Service" method="checkBAN">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
