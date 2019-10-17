@@ -3,14 +3,17 @@ package ca.matai.bungeesaver;
 import net.md_5.bungee.api.ChatColor;
 import net.md_5.bungee.api.CommandSender;
 import net.md_5.bungee.api.chat.ComponentBuilder;
+import net.md_5.bungee.api.chat.TextComponent;
 import net.md_5.bungee.api.connection.ProxiedPlayer;
 import net.md_5.bungee.api.plugin.Command;
+
+import java.util.Arrays;
 
 import static ca.matai.bungeesaver.BungeeSaver.plugin;
 
 public class KickCommand extends Command {
 
-    public KickCommand(){
+    KickCommand(){
         super("netkick");
     }
 
@@ -22,34 +25,31 @@ public class KickCommand extends Command {
                     for (ProxiedPlayer test: plugin.getProxy().getPlayers()) {
                         String name = test.getName().toLowerCase();
                         if (name.contains(args[0].toLowerCase())) {
-                            test.disconnect(new ComponentBuilder("You have been Kicked!").color(ChatColor.RED).create());
+                            test.disconnect(new TextComponent(ChatColor.RED + "Kicked by "+commandSender.getName()+"!"));
                             Service.message(commandSender, test.getDisplayName() + " has been Kicked!");
                             return;
                         }
                     }
                     Service.message(commandSender, "No player found with name similar to: " + args[0]);
-                    return;
                 }catch (Exception e){
                     Service.message(commandSender, "An error occurred, the player: " + args[0] + " couldn't be kicked");
-                    return;
 
                 }
             }
-            else if (args.length == 2){
+            else if (args.length >= 2){
                 try {
                     for (ProxiedPlayer test: plugin.getProxy().getPlayers()) {
                         String name = test.getName().toLowerCase();
                         if (name.contains(args[0].toLowerCase())) {
-                            test.disconnect(new ComponentBuilder(args[1]).create());
+                            args[0] = "";
+                            test.disconnect(new TextComponent(ChatColor.RED + Arrays.deepToString(args) + ChatColor.RESET +"\n Kicked by: " + commandSender.getName()));
                             Service.message(commandSender, test.getDisplayName() + " has been kicked!");
                             return;
                         }
                     }
                     Service.message(commandSender, "No player found with name similar to: " + args[0]);
-                    return;
                 }catch (Exception e){
                     Service.message(commandSender, "An error occurred, the player: " + args[0] + " couldn't be kicked");
-                    return;
 
                 }
             }
