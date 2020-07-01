@@ -1,0 +1,14 @@
+name: BungeeSaver
+main: ca.matai.bungeesaver.BungeeSaver
+version: 1.0.0
+author: _Matai_
+
+commands:
+  NetBan:
+    description: Kick a player from the network.
+    aliases: netban
+    usage: Syntax error! Simply type /&lt;ban&gt; <player> to ban someone.
+  NetKick:
+    description: Kick a player from the network.
+    aliases: [netkick,yeet]
+    usage: Syntax error! Simply type /&lt;ban&gt; <player> to kick someone.

@@ -1,8 +1,6 @@
 package ca.matai.bungeesaver;
 
 import net.md_5.bungee.api.ChatColor;
-import net.md_5.bungee.api.ProxyServer;
-import net.md_5.bungee.api.ServerPing;
 import net.md_5.bungee.api.chat.TextComponent;
 import net.md_5.bungee.api.connection.ProxiedPlayer;
 import net.md_5.bungee.api.event.*;
@@ -40,7 +38,6 @@ public class Events implements Listener {
     public void onJoin(final LoginEvent  event) {
         UUID pID;
         try{
-
             String name = event.getConnection().getName();
             plugin.getLogger().info(name);
         }
@@ -56,8 +53,8 @@ public class Events implements Listener {
             return;
 
         }
-        if(plugin.service.checkBAN(pID)){
-            event.setCancelReason(new TextComponent(plugin.service.getBan(pID)));
+        if(DBService.checkBAN(pID)){
+            event.setCancelReason(new TextComponent(DBService.getBan(pID)));
             event.setCancelled(true);
         }
 

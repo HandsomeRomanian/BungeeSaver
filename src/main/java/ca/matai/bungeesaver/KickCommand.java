@@ -26,13 +26,13 @@ public class KickCommand extends Command {
                         String name = test.getName().toLowerCase();
                         if (name.contains(args[0].toLowerCase())) {
                             test.disconnect(new TextComponent(ChatColor.RED + "Kicked by "+commandSender.getName()+"!"));
-                            Service.message(commandSender, test.getDisplayName() + " has been Kicked!");
+                            DBService.message(commandSender, test.getDisplayName() + " has been Kicked!");
                             return;
                         }
                     }
-                    Service.message(commandSender, "No player found with name similar to: " + args[0]);
+                    DBService.message(commandSender, "No player found with name similar to: " + args[0]);
                 }catch (Exception e){
-                    Service.message(commandSender, "An error occurred, the player: " + args[0] + " couldn't be kicked");
+                    DBService.message(commandSender, "An error occurred, the player: " + args[0] + " couldn't be kicked");
 
                 }
             }
@@ -43,18 +43,18 @@ public class KickCommand extends Command {
                         if (name.contains(args[0].toLowerCase())) {
                             args[0] = "";
                             test.disconnect(new TextComponent(ChatColor.RED + Arrays.deepToString(args) + ChatColor.RESET +"\n Kicked by: " + commandSender.getName()));
-                            Service.message(commandSender, test.getDisplayName() + " has been kicked!");
+                            DBService.message(commandSender, test.getDisplayName() + " has been kicked!");
                             return;
                         }
                     }
-                    Service.message(commandSender, "No player found with name similar to: " + args[0]);
+                    DBService.message(commandSender, "No player found with name similar to: " + args[0]);
                 }catch (Exception e){
-                    Service.message(commandSender, "An error occurred, the player: " + args[0] + " couldn't be kicked");
+                    DBService.message(commandSender, "An error occurred, the player: " + args[0] + " couldn't be kicked");
 
                 }
             }
             else{
-                Service.message(commandSender, "Invalid command format! Please use the following:\n" +
+                DBService.message(commandSender, "Invalid command format! Please use the following:\n" +
                         "/Kick <player> {message}");
             }
         }

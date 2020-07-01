@@ -26,13 +26,13 @@ public class YeetCommand extends Command {
                         String name = test.getName().toLowerCase();
                         if (name.contains(args[0].toLowerCase())) {
                             test.disconnect(new TextComponent(ChatColor.RED + "Yeeted by "+commandSender.getName()+"!"));
-                            Service.message(commandSender, test.getDisplayName() + " has been yeeted out!");
+                            DBService.message(commandSender, test.getDisplayName() + " has been yeeted out!");
                             return;
                         }
                     }
-                    Service.message(commandSender, "No player found with name similar to: " + args[0]);
+                    DBService.message(commandSender, "No player found with name similar to: " + args[0]);
                 }catch (Exception e){
-                    Service.message(commandSender, "An error occurred, the player: " + args[0] + " couldn't be yeeted");
+                    DBService.message(commandSender, "An error occurred, the player: " + args[0] + " couldn't be yeeted");
 
                 }
             }
@@ -42,18 +42,18 @@ public class YeetCommand extends Command {
                         String name = test.getName().toLowerCase();
                         if (name.contains(args[0].toLowerCase())) {
                             test.disconnect(new TextComponent(ChatColor.RED + Arrays.deepToString(args) + ChatColor.RESET +"\n Yeeted by: " + commandSender.getName()));
-                            Service.message(commandSender, test.getDisplayName() + " has been yeeted out!");
+                            DBService.message(commandSender, test.getDisplayName() + " has been yeeted out!");
                             return;
                         }
                     }
-                    Service.message(commandSender, "No player found with name similar to: " + args[0]);
+                    DBService.message(commandSender, "No player found with name similar to: " + args[0]);
                 }catch (Exception e){
-                    Service.message(commandSender, "An error occurred, the player: " + args[0] + " couldn't be yeeted");
+                    DBService.message(commandSender, "An error occurred, the player: " + args[0] + " couldn't be yeeted");
 
                 }
             }
             else{
-                Service.message(commandSender, "Invalid command format! Please use the following:\n" +
+                DBService.message(commandSender, "Invalid command format! Please use the following:\n" +
                         "/yeet <player> {message}");
             }
         }
